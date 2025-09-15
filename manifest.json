@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "엔트리 - 팔취 알림",
+  "version": "1.0.0",
+  "description": "팔로우 취소(팔취) 유저를 감지해 팝업으로 알려줍니다.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["*://playentry.org/*"],
+      "js": ["contentV15final.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }
+}
